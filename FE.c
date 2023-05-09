@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #define MAX 1024
 
-typedef struct Nodo{
-    int info;
-    struct Nodo *prox;
-}nodo;
-
 typedef struct Fila{
     int vet[MAX];
     int inicio, fim, tamanho;
@@ -31,3 +26,9 @@ void push(fila *f, int x){
     f->tamanho++;
 };
 
+int pop(fila *f){
+    int aux = f->vet[f->inicio];
+    f->inicio = (f->inicio + 1) % MAX;
+    f->tamanho--;
+    return aux;
+};
