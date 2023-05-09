@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/diana/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/GitHub, Inc/animes",
-      "program": "c:/Users/diana/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/GitHub, Inc/animes/build/Debug/outDebug",
+      "cwd": "c:/Users/fabia/OneDrive/Documentos/GitHub/animes",
+      "program": "c:/Users/fabia/OneDrive/Documentos/GitHub/animes/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
