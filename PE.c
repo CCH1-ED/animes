@@ -37,6 +37,6 @@ void watch_anime(Stack *stack, int qtd_to_watch){
     stack->vet[stack->top]->q_to_watch -= qtd_to_watch;
 }
 
-char[MAX] get_nome (Stack *stack){
+char* get_nome (Stack *stack){
     return stack->vet[stack->top]->name; 
 }
