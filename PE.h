@@ -7,7 +7,7 @@
 
 typedef struct Pilha{
     int vet[MAX];
-    anime *topo;
+    Anime *topo;
 }pilha;
 
 typedef struct Anime{
@@ -15,7 +15,7 @@ typedef struct Anime{
     int f_download;
     int f_assistir;
     struct Anime *prox;
-}anime;
+}Anime;
 
 pilha* criaPilha();
 int p_vazia(pilha *p);
