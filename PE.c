@@ -19,7 +19,7 @@ void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
     new-> f_download = qtd_to_download;
     new-> f_assistir= qtd_to_watch;
     p->top++;
-    p->vet[p->top] = x;
+    p->vet[p->top] = new;
 }
 
 int stack_pop(Stack *p){

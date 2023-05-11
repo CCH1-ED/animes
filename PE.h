@@ -21,7 +21,7 @@ Stack* create_stack();
 
 int stack_empty(Stack *p);
 
-void stack_push(Stack *p, int x);
+void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch);
 
 int stack_pop(Stack *p);
 
