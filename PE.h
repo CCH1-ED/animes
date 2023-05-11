@@ -29,6 +29,6 @@ void download_anime(Stack *stack, int qtd_to_download);
 
 void watch_anime(Stack *stack, int qtd_to_watch);
 
-char[MAX] get_nome (Stack *s);
+char[MAX] get_nome (Stack *stack);
 
 #endif
