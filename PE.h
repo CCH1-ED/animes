@@ -14,7 +14,7 @@ typedef struct Anime{
 }Anime;
 
 typedef struct Stack{
-    Anime vet[MAX];
+    Anime *vet[MAX];
     int top;
 }Stack;
 
