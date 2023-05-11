@@ -1,29 +1,30 @@
 #include "PE.h"
 
-pilha* criaPilha(){
-    pilha *p = (pilha*)malloc(sizeof(pilha));
-    p->topo = -1;
+Stack* create_stack(){
+    Stack *p = (Stack*)malloc(sizeof(Stack));
+    p->top = -1;
     return p;
 }
 
-int p_vazia(pilha *p){
-    if(p->topo == -1)
+int stack_empty(Stack *p){
+    if(p->top == -1)
         return 1;
     else
         return 0 ;
 }
 
-void p_push(pilha *p, char *nome,int qtd_to_download, int qtd_to_watch){
+void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
     Anime *new = (Anime*)malloc(sizeof(Anime));
     strcpy (new->nome, nome);
     new-> f_download = qtd_to_download;
     new-> f_assistir= qtd_to_watch;
-    p->topo++;
-    p->vet[p->topo] = x;
+    p->top++;
+    p->vet[p->top] = x;
 }
 
-int p_pop(pilha *p){
-    Anime *aux = p->vet[p->topo];
-    p->topo--;
-    return aux;
+int stack_pop(Stack *p){
+    Anime *aux = p->vet[p->top];
+    p->top--;
+    // return aux;
+    return 0;
 }

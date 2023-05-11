@@ -12,14 +12,17 @@ typedef struct Anime{
     struct Anime *prox;
 }Anime;
 
-typedef struct Pilha{
+typedef struct Stack{
     int vet[MAX];
-    Anime *topo;
-}pilha;
+    Anime *top;
+}Stack;
 
-pilha* criaPilha();
-int p_vazia(pilha *p);
-void p_push(pilha *p, int x);
-int p_pop(pilha *p);
+Stack* create_stack();
+
+int stack_empty(stack *p);
+
+void stack_push(stack *p, int x);
+
+int stack_pop(stack *p);
 
 #endif

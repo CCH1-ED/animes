@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Fila{
+typedef struct Queue{
     int vet[MAX];
     int inicio, fim, tamanho;
-}fila;
+}Queue;
 
-fila* criaFila();
-int f_vazia(fila *f);
-void f_push(fila *f, int x);
-int f_pop(fila *f);
+queue* create_queue();
+int queue_empty(queue *f);
+void queue_push(queue *f, int x);
+int queue_pop(queue *f);
 
 #endif
