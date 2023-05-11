@@ -19,10 +19,10 @@ typedef struct Stack{
 
 Stack* create_stack();
 
-int stack_empty(stack *p);
+int stack_empty(Stack *p);
 
-void stack_push(stack *p, int x);
+void stack_push(Stack *p, int x);
 
-int stack_pop(stack *p);
+int stack_pop(Stack *p);
 
 #endif
