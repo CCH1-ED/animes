@@ -6,9 +6,9 @@
 #define MAX 1024
 
 typedef struct Anime{
-    char nome[MAX];
-    int f_download;
-    int f_assistir;
+    char name[MAX];
+    int q_to_download;
+    int q_to_watch;
     struct Anime *prox;
 }Anime;
 
