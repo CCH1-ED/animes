@@ -1,9 +1,4 @@
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
 # include "PD.h"
-
-# define MAX 1024 
 
 Stack *create_stack (){
     Stack *s = (Stack*) malloc (sizeof (Stack));
@@ -41,4 +36,8 @@ void download_anime (Stack *s, int qtd_to_download){
 
 void watch_anime (Stack *s, int qtd_to_watch){
     stack->top->q_to_watch -= qtd_to_watch;
+}
+
+char[MAX] get_nome (Stack *s){
+    return stack->top->name;
 }

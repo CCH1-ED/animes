@@ -28,7 +28,7 @@ int main(){
             download_anime(stack, qtd_to_download);
             for (int i = 0; i < qtd_to_download; i++)
                 queue_push (queue, time_duration);
-            printf ("%d eps de %s baixados\n", qtd_to_download, stack->top->name); 
+            printf ("%d eps de %s baixados\n", qtd_to_download, get_nome(stack)); 
         }
 
         else if( strcmp (command, "assiste") == 0){
@@ -37,7 +37,7 @@ int main(){
             watch_anime(stack, qtd_to_watch);
             for (int i = 0; i <qtd_to_watch; i++)
                 time_watched += queue_pop(queue);
-            printf ("%d eps de %s assistidos (%d minutos)\n", qtd_to_watch, stack->top->name, time_watched); 
+            printf ("%d eps de %s assistidos (%d minutos)\n", qtd_to_watch, get_nome(stack), time_watched); 
         }
 
         scanf (" %s", command);

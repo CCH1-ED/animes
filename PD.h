@@ -1,3 +1,7 @@
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+
 # define MAX 1024 
 
 typedef struct Anime{
@@ -27,3 +31,5 @@ int stack_pop (Stack *s);
 void download_anime (Stack *s, int qtd_to_download);
 
 void watch_anime (Stack *s, int qtd_to_watch);
+
+char[MAX] get_nome (Stack *s);

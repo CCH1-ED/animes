@@ -1,3 +1,6 @@
+# include <stdio.h>
+# include <stdlib.h>
+
 typedef struct Episode{
     int time_duration;
     struct Episode *next;

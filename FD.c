@@ -1,5 +1,3 @@
-# include <stdio.h>
-# include <stdlib.h>
 # include "FD.h"
 
 Queue *create_queue (){
