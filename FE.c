@@ -1,34 +1,27 @@
-// #include <stdio.h>
-// #include <stdlib.h>
-// #define MAX 1024
+#include "FE.h"
 
-// typedef struct Fila{
-//     int vet[MAX];
-//     int inicio, fim, tamanho;
-// }fila;
+fila *criaFila(){
+    fila *f = (fila*)malloc(sizeof(fila));
+    f->inicio = f->fim = 0;
+    f->tamanho = 0;
+    return f;
+}
 
-// fila *criaFila(){
-//     fila *f = (fila*)malloc(sizeof(fila));
-//     f->inicio = f->fim = 0;
-//     f->tamanho = 0;
-//     return f;
-// };
+int vazia(fila *f){
+    if(f->tamanho == 0)
+        return 1;
+    return 0;
+};
 
-// int vazia(fila *f){
-//     if(f->tamanho == 0)
-//         return 1;
-//     return 0;
-// };
+void push(fila *f, int x){
+    f->vet[f->fim] = x;
+    f->fim = (f->fim+1) % MAX;
+    f->tamanho++;
+};
 
-// void push(fila *f, int x){
-//     f->vet[f->fim] = x;
-//     f->fim = (f->fim+1) % MAX;
-//     f->tamanho++;
-// };
-
-// int pop(fila *f){
-//     int aux = f->vet[f->inicio];
-//     f->inicio = (f->inicio + 1) % MAX;
-//     f->tamanho--;
-//     return aux;
-// };
+int pop(fila *f){
+    int aux = f->vet[f->inicio];
+    f->inicio = (f->inicio + 1) % MAX;
+    f->tamanho--;
+    return aux;
+};
