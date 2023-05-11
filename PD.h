@@ -32,4 +32,4 @@ void download_anime (Stack *s, int qtd_to_download);
 
 void watch_anime (Stack *s, int qtd_to_watch);
 
-char[MAX] get_nome (Stack *s);
+char * get_nome (Stack *s);
