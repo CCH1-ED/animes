@@ -1,11 +1,18 @@
-#include "FE.h"
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 1024
+
+typedef struct Fila{
+    int vet[MAX];
+    int inicio, fim, tamanho;
+}fila;
 
 fila *criaFila(){
     fila *f = (fila*)malloc(sizeof(fila));
     f->inicio = f->fim = 0;
     f->tamanho = 0;
     return f;
-}
+};
 
 int vazia(fila *f){
     if(f->tamanho == 0)

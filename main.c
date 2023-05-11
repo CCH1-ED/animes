@@ -2,7 +2,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "PD.h"
-# include "FD.h"
+# Include "FD.h"
 
 int main(){
     char name[200], command[100];
