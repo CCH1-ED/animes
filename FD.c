@@ -13,9 +13,9 @@ int queue_empty (Queue *q){
 }
 
 
-void queue_push (Queue *q, int x){
+void queue_push (Queue *q, int time){
     Episode *new = (Episode*) malloc (sizeof (Episode));
-    new->time_duration = x;
+    new->time_duration = time;
     new->next = NULL;
     if (q->end != NULL) 
         q->end->next = new;
@@ -26,12 +26,13 @@ void queue_push (Queue *q, int x){
 
 
 int queue_pop (Queue *q){
-    int x = q->start->time_duration;
+    int time = q->start->time_duration;
     Episode *aux = q->start->next;
     if (q->end == q->start) 
         q->end = NULL;
     free (q->start);
     q->start = aux;
-    return x;
+    return time;
 }
+
 

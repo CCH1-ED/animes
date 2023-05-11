@@ -16,7 +16,7 @@ Queue *create_queue ();
 
 int queue_empty (Queue *q);
 
-void queue_push (Queue *q, int x);
+void queue_push (Queue *q, int time);
 
 int queue_pop (Queue *q);
 

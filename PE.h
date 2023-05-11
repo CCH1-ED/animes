@@ -1,16 +1,16 @@
-#ifndef PE_H_INCLUDED
-#define PE_H_INCLUDED
+// #ifndef PE_H_INCLUDED
+// #define PE_H_INCLUDED
 
-typedef struct Nodo{
-}nodo;
+// typedef struct Nodo{
+// }nodo;
 
-typedef struct Pilha{
-}pilha;
+// typedef struct Pilha{
+// }pilha;
 
-typedef struct Anime{
-}anime;
+// typedef struct Anime{
+// }anime;
 
-pilha* criaPilha(){
-};
+// pilha* criaPilha(){
+// };
 
-#endif
+// #endif

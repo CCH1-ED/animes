@@ -1,7 +1,7 @@
 typedef struct Anime{
     char name[200];
     int q_to_download;
-    int q__to_watch;
+    int q_to_watch;
     struct Anime * next;
 }Anime;
 

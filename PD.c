@@ -16,9 +16,9 @@ int stack_empty (Stack *s){
 
 void stack_push (Stack *s, char nome[200], int qtd_to_download, int qtd_to_watch){
     Anime *new = (Anime*) malloc (sizeof (Anime));
-    new->name = nome;
+    strcpy (new->name, nome);
     new-> q_to_download = qtd_to_download;
-    new-> q_to_whatch = qtd_to_watch;
+    new-> q_to_watch = qtd_to_watch;
     if (s->top != NULL) 
         s->top->next = new;
     s->top = new;
@@ -28,4 +28,6 @@ int stack_pop (Stack *s){
     Anime *aux = s->top->next;
     free (s->top);
     s->top = aux;
+    return 0; // arrumar depois
 }
+
