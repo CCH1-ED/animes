@@ -1,3 +1,5 @@
+# ifndef PD_H_INCLUDED
+# define PD_H_INCLUDED
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -33,3 +35,6 @@ void download_anime (Stack *s, int qtd_to_download);
 void watch_anime (Stack *s, int qtd_to_watch);
 
 char * get_nome (Stack *s);
+
+
+# endif

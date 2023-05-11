@@ -1,3 +1,5 @@
+# ifndef FD_H_INCLUDED
+# define FD_H_INCLUDED
 # include <stdio.h>
 # include <stdlib.h>
 
@@ -24,3 +26,4 @@ void queue_push (Queue *q, int time);
 int queue_pop (Queue *q);
 
 
+# endif
