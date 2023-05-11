@@ -2,6 +2,7 @@
 #define PE_H_INCLUDED
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAX 1024
 
 typedef struct Pilha{
@@ -13,7 +14,7 @@ typedef struct Anime{
     char nome[MAX];
     int f_download;
     int f_assistir;
-    struct Anime * next;
+    struct Anime *prox;
 }anime;
 
 pilha* criaPilha();

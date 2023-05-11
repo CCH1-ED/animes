@@ -13,9 +13,11 @@ int p_vazia(pilha *p){
         return 0 ;
 }
 
-void p_push(pilha *p, char *nome,int qtd_to_downoad, int qtd_to_watch){
-    anime *new = ();
-    
+void p_push(pilha *p, char *nome,int qtd_to_download, int qtd_to_watch){
+    anime *new = (anime*)malloc(sizeof(anime));
+    strcpy (new->nome, nome);
+    new-> f_download = qtd_to_download;
+    new-> f_assistir= qtd_to_watch;
     p->topo++;
     p->vet[p->topo] = x;
 }
