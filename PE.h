@@ -17,8 +17,8 @@ typedef struct Anime{
 }anime;
 
 pilha* criaPilha();
-int vazia(pilha *p);
-void push(pilha *p, int x);
-int pop(pilha *p);
+int p_vazia(pilha *p);
+void p_push(pilha *p, int x);
+int p_pop(pilha *p);
 
 #endif

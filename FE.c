@@ -7,19 +7,19 @@ fila *criaFila(){
     return f;
 }
 
-int vazia(fila *f){
+int f_vazia(fila *f){
     if(f->tamanho == 0)
         return 1;
     return 0;
 };
 
-void push(fila *f, int x){
+void f_push(fila *f, int x){
     f->vet[f->fim] = x;
     f->fim = (f->fim+1) % MAX;
     f->tamanho++;
 };
 
-int pop(fila *f){
+int f_pop(fila *f){
     int aux = f->vet[f->inicio];
     f->inicio = (f->inicio + 1) % MAX;
     f->tamanho--;

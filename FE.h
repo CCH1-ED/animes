@@ -10,8 +10,8 @@ typedef struct Fila{
 }fila;
 
 fila* criaFila();
-int vazia(fila *f);
-void push(fila *f, int x);
-int pop(fila *f);
+int f_vazia(fila *f);
+void f_push(fila *f, int x);
+int f_pop(fila *f);
 
 #endif
