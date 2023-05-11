@@ -1,8 +1,8 @@
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include "PD.h"
-# include "FD.h"
+# include "PE.h"
+# include "FE.h"
 
 # define MAX 1024 
 
@@ -19,7 +19,7 @@ int main(){
         if( strcmp (command, "comeca") == 0){
             Queue *queue = create_queue();
             scanf ("%s%d", &name, &qtd_total);
-            stack_push (stack, name, qtd_total);
+            stack_push (stack, name, qtd_total, qtd_total);
             printf ("comecando %s\n", name); 
         }
         
