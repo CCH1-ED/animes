@@ -3,6 +3,8 @@
 # include <string.h>
 # include "PD.h"
 
+# define MAX 1024 
+
 Stack *create_stack (){
     Stack *s = (Stack*) malloc (sizeof (Stack));
     s->top = NULL;
@@ -14,11 +16,12 @@ int stack_empty (Stack *s){
     return s->top == NULL ? 1 : 0;
 }
 
-void stack_push (Stack *s, char nome[200], int qtd_to_download, int qtd_to_watch){
+void stack_push (Stack *s, char nome[MAX], int qtd_total){
     Anime *new = (Anime*) malloc (sizeof (Anime));
     strcpy (new->name, nome);
-    new-> q_to_download = qtd_to_download;
-    new-> q_to_watch = qtd_to_watch;
+    new-> q_to_download = qtd_total;
+    new-> q_to_watch = qtd_total;
+    new-> total_episodes = qtd_total;
     if (s->top != NULL) 
         s->top->next = new;
     s->top = new;

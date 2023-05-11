@@ -4,11 +4,13 @@
 # include "PD.h"
 # include "FD.h"
 
+# define MAX 1024 
+
 // limitar e verificar pelo valor total de ep do anime
 
 int main(){
-    char name[200], command[100];
-    int qtd_to_watch, qtd_to_download, time_duration;
+    char name[MAX], command[MAX];
+    int qtd_to_watch, qtd_to_download, time_duration , qtd_total;
     Stack *stack = create_stack();
     Queue *queue = create_queue ();
     scanf ("%s", &command);
@@ -16,8 +18,8 @@ int main(){
     while( strcmp (command, "F") !=0){
         if( strcmp (command, "comeca") == 0){
             Queue *queue = create_queue();
-            scanf ("%s%d", &name, &qtd_to_download);
-            stack_push (stack, name, qtd_to_download, qtd_to_download);
+            scanf ("%s%d", &name, &qtd_total);
+            stack_push (stack, name, qtd_total);
             printf ("comecando %s\n", name); 
         }
         
