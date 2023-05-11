@@ -34,3 +34,11 @@ int stack_pop (Stack *s){
     return 0; // arrumar depois
 }
 
+
+void download_anime (Stack *s, int qtd_to_download){
+    stack->top->q_to_download -= qtd_to_download;
+}
+
+void watch_anime (Stack *s, int qtd_to_watch){
+    stack->top->q_to_watch -= qtd_to_watch;
+}

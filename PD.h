@@ -23,3 +23,7 @@ int stack_empty (Stack *s);
 void stack_push (Stack *s, char nome[MAX], int qtd_to_download, int qtd_to_watch);
 
 int stack_pop (Stack *s);
+
+void download_anime (Stack *s, int qtd_to_download);
+
+void watch_anime (Stack *s, int qtd_to_watch);
