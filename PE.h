@@ -9,7 +9,8 @@ typedef struct Anime{
     char name[MAX];
     int q_to_download;
     int q_to_watch;
-    struct Anime *prox;
+    int total_episodes;
+    struct Anime *next;
 }Anime;
 
 typedef struct Stack{
