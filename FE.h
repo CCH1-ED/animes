@@ -9,9 +9,9 @@ typedef struct Queue{
     int inicio, fim, tamanho;
 }Queue;
 
-queue* create_queue();
-int queue_empty(queue *f);
-void queue_push(queue *f, int x);
-int queue_pop(queue *f);
+Queue* create_queue();
+int queue_empty(Queue *f);
+void queue_push(Queue *f, int x);
+int queue_pop(Queue *f);
 
 #endif
