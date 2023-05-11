@@ -2,15 +2,15 @@
 
 Stack* create_stack(){
     Stack *p = (Stack*)malloc(sizeof(Stack));
-    p->top = -1;
+    p->top = NULL;
     return p;
 }
 
 int stack_empty(Stack *p){
-    if(p->top == -1)
+    if(p->top == NULL)
         return 1;
     else
-        return 0 ;
+        return 0;
 }
 
 void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
