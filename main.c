@@ -19,7 +19,7 @@ int main(){
         if( strcmp (command, "comeca") == 0){
             Queue *queue = create_queue();
             scanf ("%s%d", &name, &qtd_total);
-            stack_push (stack, name, qtd_total, qtd_total);
+            stack_push (stack, name, qtd_total, qtd_total); // ARRUMAR
             printf ("comecando %s\n", name); 
         }
         
