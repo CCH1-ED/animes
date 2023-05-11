@@ -2,12 +2,12 @@
 
 Stack* create_stack(){
     Stack *p = (Stack*)malloc(sizeof(Stack));
-    p->topo = NULL;
+    p->top = -1;
     return p;
 }
 
 int stack_empty(Stack *p){
-    if(p->topo == NULL)
+    if(p->top == -1)
         return 1;
     else
         return 0;
@@ -18,13 +18,13 @@ void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
     strcpy (new->name, nome);
     new-> q_to_download = qtd_to_download;
     new-> q_to_watch= qtd_to_watch;
-    p->topo++;
-    p->vet[p->topo] = new;
+    p->top++;
+    p->vet[p->top] = new;
 }
 
 int stack_pop(Stack *p){
-    Anime *aux = p->vet[p->topo];
-    p->topo--;
+    Anime *aux = p->vet[p->top];
+    p->top--;
     // return aux;
     return 0;
 }
