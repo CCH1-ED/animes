@@ -3,6 +3,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include "FD.h"
 
 # define MAX 1024 
 
@@ -12,6 +13,7 @@ typedef struct Anime{
     int q_to_watch;
     int total_episodes;
     struct Anime * next;
+    Queue *queue
 }Anime;
 
 
