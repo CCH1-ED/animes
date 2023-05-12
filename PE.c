@@ -13,7 +13,7 @@ int stack_empty(Stack *p){
         return 0;
 }
 
-void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
+void stack_push(Stack *p, char *nome, int qtd_to_download, int qtd_to_watch){
     Anime *new = (Anime*)malloc(sizeof(Anime));
     strcpy (new->name, nome);
     new-> q_to_download = qtd_to_download;
@@ -23,11 +23,11 @@ void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch){
     p->vet[p->top] = new;
 }
 
-int stack_pop(Stack *p){
+Anime* stack_pop(Stack *p){
     Anime *aux = p->vet[p->top];
     p->top--;
-    // return aux;
-    return 0;
+    return aux;
+    //return 0;
 }
 
 void download_anime(Stack *stack, int qtd_to_download){
