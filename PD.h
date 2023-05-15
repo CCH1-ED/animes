@@ -1,7 +1,5 @@
 # ifndef PD_H_INCLUDED
 # define PD_H_INCLUDED
-# include <stdio.h>
-# include <stdlib.h>
 # include <string.h>
 # include "FD.h"
 
@@ -13,7 +11,7 @@ typedef struct Anime{
     int q_to_watch;
     int total_episodes;
     struct Anime * next;
-    Queue *queue
+    Queue *queue;
 }Anime;
 
 
@@ -28,7 +26,7 @@ Stack *create_stack ();
 
 int stack_empty (Stack *s);
 
-void stack_push (Stack *s, char nome[MAX], int qtd_to_download, int qtd_to_watch);
+void stack_push (Stack *s, char name[MAX], int qtd_total, Queue *queue);
 
 int stack_pop (Stack *s);
 

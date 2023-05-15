@@ -3,6 +3,7 @@
 Queue *create_queue (){
     Queue *q = (Queue*) malloc (sizeof (Queue));
     q->start = q->end = NULL;
+    return q;
 }
 
 
@@ -18,7 +19,7 @@ void queue_push (Queue *q, int time){
     if (q->end != NULL) 
         q->end->next = new;
     q->end = new;
-    if (q->start ==NULL) 
+    else 
         q->start = new;
 }
 
