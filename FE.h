@@ -10,8 +10,11 @@ typedef struct Queue{
 }Queue;
 
 Queue* create_queue();
+
 int queue_empty(Queue *f);
+
 void queue_push(Queue *f, int x);
+
 int queue_pop(Queue *f);
 
 #endif

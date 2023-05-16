@@ -23,13 +23,15 @@ Stack* create_stack();
 
 int stack_empty(Stack *p);
 
-void stack_push(Stack *p, char *nome,int qtd_to_download, int qtd_to_watch);
+void stack_push(Stack *p, char *nome, int total_episodes, Queue *queue);
 
 Anime* stack_pop(Stack *p);
 
 void download_anime(Stack *stack, int qtd_to_download);
 
 void watch_anime(Stack *stack, int qtd_to_watch);
+
+
 
 char* get_nome (Stack *stack);
 
