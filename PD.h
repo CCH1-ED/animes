@@ -1,6 +1,8 @@
 # ifndef PD_H_INCLUDED
 # define PD_H_INCLUDED
-# include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 # include "FD.h"
 
 # define MAX 1024 
@@ -26,9 +28,9 @@ Stack *create_stack ();
 
 int stack_empty (Stack *s);
 
-void stack_push (Stack *s, char name[MAX], int qtd_total, Queue *queue);
+void stack_push (Stack *s, char name[MAX], int total_episodes, Queue *queue);
 
-int stack_pop (Stack *s);
+Anime* stack_pop (Stack *s);
 
 void download_anime (Stack *s, int qtd_to_download);
 

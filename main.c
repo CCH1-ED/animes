@@ -1,8 +1,8 @@
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
+// # include "PD.h"
 # include "PE.h"
-# include "FE.h"
 
 # define MAX 1024 
 
@@ -26,7 +26,6 @@ int main(){
         
         else if( strcmp (command, "download") == 0){
             scanf (" %d %d", &qtd_to_download, &time_duration);
-
             if(stack_empty(stack) == 1){
                 printf("Nenhum anime a baixar no momento\n");
             }
@@ -40,8 +39,8 @@ int main(){
                 }
 
                 for (int i = 0; i < qtd_to_download; i++)
-                    queue_push (anime->queue, time_duration); // pegar topo e envia a fila do topo, quando download == 0 acabo o anime e desce na pilha    
 
+                    queue_push (anime->queue, time_duration); // pegar topo e envia a fila do topo, quando download == 0 acabo o anime e desce na pilha    
 
                 //stack_push(stack, anime->name, anime->total_episodes, anime->queue);
                 watch_anime(stack, anime->q_to_watch);
@@ -51,7 +50,7 @@ int main(){
             }
         }
 
-        else if( strcmp (command, "assiste") == 0){
+        else if( strcmp (command, "assiste") == 0){ 
             int time_watched = 0;
             scanf ("%d", &qtd_to_watch);
             
@@ -90,6 +89,18 @@ int main(){
 
         scanf (" %s", command);
     }
-    getchar();
+    printf("---\n");
+    while(stack_empty(stack)!=1){
+        Anime *anime = stack_pop(stack);
+        printf("%s: faltam baixar %d eps e assistir %d eps\n", anime->name, anime->total_episodes-(anime->q_to_download + anime->q_to_watch), anime->total_episodes-anime->q_to_watch);
+        while(queue_empty(anime->queue)!=1){
+            int i = queue_pop(anime->queue);
+        }
+        free(anime->queue);
+        free(anime);
+    }
+    
+    scanf("%s", &command);
+
     return 0;
 }

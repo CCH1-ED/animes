@@ -18,9 +18,9 @@ void queue_push (Queue *q, int time){
     new->next = NULL;
     if (q->end != NULL) 
         q->end->next = new;
-    q->end = new;
     else 
         q->start = new;
+    q->end = new;
 }
 
 

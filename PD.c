@@ -11,12 +11,12 @@ int stack_empty (Stack *s){
     return s->top == NULL ? 1 : 0;
 }
 
-void stack_push (Stack *s, char name[MAX], int qtd_total, Queue *queue){   // ARRUMAR
+void stack_push (Stack *s, char name[MAX], int total_episodes, Queue *queue){   // ARRUMAR
     Anime *new = (Anime*) malloc (sizeof (Anime));
-    strcpy (new->name, nome);
-    new-> q_to_download = qtd_total;
-    new-> q_to_watch = qtd;
-    new-> total_episodes = qtd_total;
+    strcpy (new->name, name);
+    new-> q_to_download = 0;
+    new-> q_to_watch = 0;
+    new-> total_episodes = total_episodes;
     new->queue = queue;
     new-> next = s->top;
     s->top = new;
@@ -30,11 +30,11 @@ Anime* stack_pop (Stack *s){
 
 
 void download_anime (Stack *s, int qtd_to_download){
-    s->top->q_to_download -= qtd_to_download;
+    s->top->q_to_download += qtd_to_download;
 }
 
 void watch_anime (Stack *s, int qtd_to_watch){
-    s->top->q_to_watch -= qtd_to_watch;
+    s->top->q_to_watch += qtd_to_watch;
 }
 
 char * get_nome (Stack *s){
