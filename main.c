@@ -1,7 +1,11 @@
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
+
+// caso queira mudar para tudo dinâmico ou tudo estático é só alterar logo abaixo
+// caso queira alterar para um dinâmico e um estático precisa definir a pilha aq e alterar no include da pilha.h
 # include "PE.h"
+// # include "PD.h"
 
 # define MAX 1024 
 
@@ -70,10 +74,13 @@ int main(){
                 printf ("%d eps de %s assistidos (%d minutos)\n", qtd_to_watch, get_nome(stack), time_watched); //retorna o nomero de episodios e o tempo
 
                 
-                watch_anime(stack, anime->q_to_watch + qtd_to_watch);   //diana
-                download_anime(stack, anime->q_to_download);
+                watch_anime(stack, anime->q_to_watch + qtd_to_watch);   //altera o valor da quantidade de animes vistos
+                download_anime(stack, anime->q_to_download);  
                 
-                if(anime->q_to_watch + qtd_to_watch == anime->total_episodes && anime->q_to_download == 0){
+                if(anime->q_to_watch + qtd_to_watch == anime->total_episodes && anime->q_to_download == 0){ 
+                    /*
+                        liberar o anime e a fila de episódios
+                    */
                     free(anime);
                     anime = stack_pop(stack);
                     printf("acabou %s\n", anime->name);
@@ -87,16 +94,19 @@ int main(){
     }
     printf("---\n");
     while(stack_empty(stack)!=1){
+        /* 
+            para todos os animes ainda na pilha dá um print na quantidade que ainda falta baixar e assistir e dá free na fila do anime e no anime
+        */
         Anime *anime = stack_pop(stack);
         printf("%s: faltam baixar %d eps e assistir %d eps\n", anime->name, anime->total_episodes-(anime->q_to_download + anime->q_to_watch), anime->total_episodes-anime->q_to_watch);
         while(queue_empty(anime->queue)!=1){
             int i = queue_pop(anime->queue);
         }
-        free(anime->queue);
-        free(anime);
+        free(anime->queue); 
+        free(anime);  
     }
     
-    scanf("%s", &command);
+    scanf("%s", &command); // para não encerrar diretamente o executável
 
     return 0;
 }
