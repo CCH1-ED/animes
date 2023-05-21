@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Queue{
-    int vet[MAX];
-    int inicio, fim, tamanho;
+typedef struct Queue{   //nodo da fila 
+    int vet[MAX];   //inicia o vetor da fila
+    int inicio, fim, tamanho;   //inicia o inicio,fim e tamanho da fila
 }Queue;
 
 Queue* create_queue();

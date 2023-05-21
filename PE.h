@@ -6,17 +6,17 @@
 #include "FE.h"
 #define MAX 1024
 
-typedef struct Anime{
-    char name[MAX];
-    int q_to_download;
-    int q_to_watch;
-    int total_episodes;
-    Queue *queue;
+typedef struct Anime{ //nodo do anime
+    char name[MAX]; //nome dos animes
+    int q_to_download;  //episodios baixados e não assistidos
+    int q_to_watch; //episodios assistidos
+    int total_episodes; //numero total de episodios do anime
+    Queue *queue;   //faz a struct anime aponta pra fila
 }Anime;
 
-typedef struct Stack{
-    Anime *vet[MAX];
-    int top;
+typedef struct Stack{   //nodo da pilha
+    Anime *vet[MAX];    //faz o vetor de pilha aponta pra struct anime
+    int top;    //inicia o topo da pilha
 }Stack;
 
 Stack* create_stack();
@@ -30,8 +30,6 @@ Anime* stack_pop(Stack *p);
 void download_anime(Stack *stack, int qtd_to_download);
 
 void watch_anime(Stack *stack, int qtd_to_watch);
-
-
 
 char* get_nome (Stack *stack);
 
